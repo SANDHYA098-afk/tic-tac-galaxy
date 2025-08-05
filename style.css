@@ -117,4 +117,40 @@ body.pastel-theme .cell {
     font-size: 0.7rem;
     padding: 6px 12px;
   }
+
+}
+
+@media (max-width: 768px) {
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 4px;
+    margin-top: 20px;
+    max-width: 90vw;
+  }
+
+  .cell {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: 18px;
+  }
+
+  .form-select,
+  .form-label {
+    font-size: 0.7rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  #status {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #restart {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }
