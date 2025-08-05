@@ -56,7 +56,7 @@ function setupBoard() {
 
   // Clear and style the grid
   gameBoard.innerHTML = "";
-  gameBoard.style.gridTemplateColumns = `repeat(${gridSize}, 60px)`;
+  gameBoard.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
   for (let i = 0; i < board.length; i++) {
     const cell = document.createElement("div");
@@ -138,4 +138,5 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   document.addEventListener("click", enableAudio);
+
 });
