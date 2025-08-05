@@ -17,15 +17,18 @@ body {
 /* 🎮 Game Board Layout */
 .game-board {
     display: grid;
-    gap: 5px;
+    gap: 6px;
     justify-content: center;
     align-content: center;
+    margin: 20px auto;
+    max-width: 100%;
+    width: fit-content;
 }
 
 /* 🟪 Game Cell */
 .cell {
     width: 60px;
-    height: 60px;
+    aspect-ratio: 1 / 1; /* Perfect square */
     background-color: #1c003f;
     color: #00ffea;
     font-size: 32px;
@@ -37,7 +40,6 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
-
 .cell:hover {
     background-color: #290055;
 }
@@ -154,3 +156,33 @@ body.pastel-theme .cell {
     padding: 6px 12px;
   }
 }
+@media (max-width: 768px) {
+  .cell {
+    width: 50px;
+    font-size: 20px;
+  }
+
+  .game-board {
+    gap: 4px;
+  }
+
+  .form-select,
+  .form-label {
+    font-size: 0.7rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  #status {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #restart {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
