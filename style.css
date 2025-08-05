@@ -1,0 +1,120 @@
+/* 🎮 Font & General Setup */
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: linear-gradient(135deg, #0f0f2d, #2c003e); /* space vibes */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* 🎨 Title */
+.title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #00ffff;
+    text-shadow: 2px 2px 0 #44007c;
+}
+
+/* 🎮 Game Board Layout */
+.game-board {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* 🟪 Game Cell */
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #1c003f;
+    color: #00ffea;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #540d6e;
+    box-shadow: 0 0 10px #8600c7;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #290055;
+}
+
+/* 📋 Status Text */
+.status-text {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 0 #00ffee;
+}
+
+/* 🔁 Restart Button */
+.restart-btn {
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.restart-btn:hover {
+    background-color: #00ffee;
+    color: #0a001f;
+    font-weight: bold;
+}
+
+/* 🌌 Theme Overrides (optional later) */
+body.pixel-theme {
+    background-color: #111;
+    color: #ff00c8;
+}
+
+body.dark-theme {
+    background-color: #000000;
+    color: #39ff14;
+}
+body.pastel-theme {
+    background-color: #fff1f8; /* Soft pastel background */
+    background-image: none;
+    color: #333;
+}
+
+body.pastel-theme .cell {
+    background-color: #ffd8e4;
+    border: 2px solid #ffab73;
+    color: #2b2b2b;
+    box-shadow: 0 0 5px #96e0ff;
+}
+@media (max-width: 768px) {
+  .game-board {
+    gap: 4px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
+  }
+
+  .cell {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 20px !important;
+  }
+
+  .form-select {
+    font-size: 0.6rem;
+    padding: 4px;
+  }
+
+  .form-label {
+    font-size: 0.6rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
