@@ -124,3 +124,14 @@ function checkWinner() {
 
   return false;
 }
+function changeTheme(theme) {
+  document.body.classList.remove("pixel-theme", "dark-theme", "pastel-theme");
+
+  if (theme === "pixel") {
+    document.body.classList.add("pixel-theme");
+  } else if (theme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else if (theme === "pastel") {
+    document.body.classList.add("pastel-theme");
+  }
+}
