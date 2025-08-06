@@ -1,4 +1,4 @@
-// 🌌 DOM Elements
+// DOM Elements
 const gameBoard = document.getElementById("gameBoard");
 const gridSizeSelect = document.getElementById("grid-size");
 const statusText = document.getElementById("status");
@@ -7,9 +7,11 @@ const modeSelect = document.getElementById("mode");
 const markerSelect = document.getElementById("player-marker");
 const themeSelect = document.getElementById("theme");
 
-// 🌀 Game State
+// Game State
 let gridSize = 3;
-let currentPlayer = "X";
+let currentPlayer;
+document.getElementById("marker-display").textContent = 
+  `Player 1: ${markerSelect.value} | Player 2: ${markerSelect.value === "X" ? "O" : "X"}`;
 let gameRunning = false;
 let board = [];
 
@@ -19,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
   addEventListeners();
 });
 
-// 🛠 Setup Event Listeners
+// Setup Event Listeners
 function addEventListeners() {
   gridSizeSelect.addEventListener("change", () => {
     gridSize = parseInt(gridSizeSelect.value);
@@ -50,6 +52,7 @@ function changeTheme(theme) {
 
 // 🔄 Setup the Game Board
 function setupBoard() {
+  currentPlayer = markerSelect.value;
   board = Array(gridSize * gridSize).fill("");
   currentPlayer = "X";
   gameRunning = true;
