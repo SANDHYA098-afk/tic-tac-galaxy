@@ -57,17 +57,6 @@ body {
     background-color: transparent;
     color: #ffffff;
     transition: 0.2s;
-}body.pastel-theme {
-    background-color: #fff1f8; /* Soft pastel background */
-    background-image: none;
-    color: #333;
-}
-
-body.pastel-theme .cell {
-    background-color: #ffd8e4;
-    border: 2px solid #ffab73;
-    color: #2b2b2b;
-    box-shadow: 0 0 5px #96e0ff;
 }
 
 .restart-btn:hover {
@@ -86,17 +75,3 @@ body.dark-theme {
     background-color: #000000;
     color: #39ff14;
 }
-
-body.pastel-theme {
-    background-color: #fff1f8; /* Soft pastel background */
-    background-image: none;
-    color: #333;
-}
-
-body.pastel-theme .cell {
-    background-color: #ffd8e4;
-    border: 2px solid #ffab73;
-    color: #2b2b2b;
-    box-shadow: 0 0 5px #96e0ff;
-}
-
