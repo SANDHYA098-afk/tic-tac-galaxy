@@ -10,38 +10,35 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-
+  
   <!-- Google Pixel Font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  
   <!-- Your Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="bg-dark text-light">
-
- 
 
   <div class="container text-center py-5">
     <h1 class="title mb-4">TIC TAC GALAXY</h1>
 
-    <!-- 🎮 Game Settings -->
-    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mb-5">
-      <div>
+    <!-- Game Settings -->
+    <div class="row justify-content-center mb-4 g-3">
+      <div class="col-md-2">
         <label for="mode" class="form-label">Game Mode</label>
         <select id="mode" class="form-select">
-          <option value="pvp">2 PLAYER 🤜🤛</option>
-          <option value="cpu">VS BOT 🤖[under construction 🛠]</option>
+          <option value="pvp">Player vs Player</option>
+          <option value="cpu">Player vs Computer</option>
         </select>
       </div>
-      <div>
-<p id="marker-display" class="text-muted small"></p>
+      <div class="col-md-2">
         <label for="player-marker" class="form-label">Your Marker</label>
         <select id="player-marker" class="form-select">
           <option value="X">X</option>
           <option value="O">O</option>
         </select>
       </div>
-      <div>
+      <div class="col-md-2">
         <label for="grid-size" class="form-label">Grid Size</label>
         <select id="grid-size" class="form-select">
           <option value="3">3 x 3</option>
@@ -49,11 +46,12 @@
           <option value="5">5 x 5</option>
         </select>
       </div>
-      <div>
+      <div class="col-md-2">
         <label for="theme" class="form-label">Theme</label>
         <select id="theme" class="form-select">
-          <option value="space">Space PURBLE 🔮</option>
-          <option value="pastel">Kuromi DARK 🌑</option>
+          <option value="space">Space Galaxy</option>
+          <option value="pixel">Pixel Retro</option>
+          <option value="dark">Dark Hacker</option>
         </select>
       </div>
     </div>
@@ -66,9 +64,9 @@
     <button id="restart" class="btn btn-outline-light px-4 py-2">RESTART</button>
   </div>
 
-  <!-- Bootstrap Bundle -->
+  <!-- Bootstrap Bundle JS (optional for dropdown, modal, etc.) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  
   <!-- Game Logic -->
   <script src="main.js"></script>
 </body>
